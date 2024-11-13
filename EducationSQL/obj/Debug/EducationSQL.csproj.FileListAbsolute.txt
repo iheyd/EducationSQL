@@ -1,0 +1,10 @@
+C:\Users\0_ihe\RiderProjects\EducationSQL\EducationSQL\bin\Debug\EducationSQL.exe.config
+C:\Users\0_ihe\RiderProjects\EducationSQL\EducationSQL\bin\Debug\EducationSQL.exe
+C:\Users\0_ihe\RiderProjects\EducationSQL\EducationSQL\bin\Debug\EducationSQL.pdb
+C:\Users\0_ihe\RiderProjects\EducationSQL\EducationSQL\obj\Debug\EducationSQL.csproj.AssemblyReference.cache
+C:\Users\0_ihe\RiderProjects\EducationSQL\EducationSQL\obj\Debug\EducationSQL.Properties.Resources.resources
+C:\Users\0_ihe\RiderProjects\EducationSQL\EducationSQL\obj\Debug\EducationSQL.csproj.GenerateResource.cache
+C:\Users\0_ihe\RiderProjects\EducationSQL\EducationSQL\obj\Debug\EducationSQL.csproj.CoreCompileInputs.cache
+C:\Users\0_ihe\RiderProjects\EducationSQL\EducationSQL\obj\Debug\EducationSQL.exe
+C:\Users\0_ihe\RiderProjects\EducationSQL\EducationSQL\obj\Debug\EducationSQL.pdb
+C:\Users\0_ihe\RiderProjects\EducationSQL\EducationSQL\obj\Debug\EducationSQL.MainForm.resources
