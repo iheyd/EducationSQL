@@ -55,6 +55,9 @@
             this.countButton = new System.Windows.Forms.Button();
             this.concatenationButton = new System.Windows.Forms.Button();
             this.subqueriesButton = new System.Windows.Forms.Button();
+            this.txtQueryInput = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // runButton
@@ -72,6 +75,7 @@
             this.runButton.Size = new System.Drawing.Size(156, 30);
             this.runButton.TabIndex = 0;
             this.runButton.UseVisualStyleBackColor = false;
+            this.runButton.Click += new System.EventHandler(this.runButton_Click);
             this.runButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.runButton_MouseDown);
             this.runButton.MouseEnter += new System.EventHandler(this.runButton_MouseEnter);
             this.runButton.MouseLeave += new System.EventHandler(this.runButton_MouseLeave);
@@ -92,6 +96,7 @@
             this.clearButton.Size = new System.Drawing.Size(156, 30);
             this.clearButton.TabIndex = 1;
             this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             this.clearButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.clearButton_MouseDown);
             this.clearButton.MouseEnter += new System.EventHandler(this.clearButton_MouseEnter);
             this.clearButton.MouseLeave += new System.EventHandler(this.clearButton_MouseLeave);
@@ -112,6 +117,7 @@
             this.exportButton.Size = new System.Drawing.Size(156, 30);
             this.exportButton.TabIndex = 2;
             this.exportButton.UseVisualStyleBackColor = false;
+            this.exportButton.Click += new System.EventHandler(this.exportButton_Click);
             this.exportButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.exportButton_MouseDown);
             this.exportButton.MouseEnter += new System.EventHandler(this.exportButton_MouseEnter);
             this.exportButton.MouseLeave += new System.EventHandler(this.exportButton_MouseLeave);
@@ -557,6 +563,28 @@
             this.subqueriesButton.MouseLeave += new System.EventHandler(this.subqueriesButton_MouseLeave);
             this.subqueriesButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.subqueriesButton_MouseUp);
             // 
+            // txtQueryInput
+            // 
+            this.txtQueryInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(201)))), ((int)(((byte)(220)))));
+            this.txtQueryInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtQueryInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtQueryInput.Location = new System.Drawing.Point(778, 344);
+            this.txtQueryInput.Multiline = true;
+            this.txtQueryInput.Name = "txtQueryInput";
+            this.txtQueryInput.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtQueryInput.Size = new System.Drawing.Size(470, 300);
+            this.txtQueryInput.TabIndex = 26;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(201)))), ((int)(((byte)(220)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(778, 36);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(470, 295);
+            this.dataGridView1.TabIndex = 27;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -564,6 +592,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.txtQueryInput);
             this.Controls.Add(this.subqueriesButton);
             this.Controls.Add(this.concatenationButton);
             this.Controls.Add(this.countButton);
@@ -596,9 +626,15 @@
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "MainForm";
             this.Text = "EducationSQL";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
         }
-        
+
+        private System.Windows.Forms.DataGridView dataGridView1;
+
+        private System.Windows.Forms.TextBox txtQueryInput;
+
         private System.Windows.Forms.Button selectButton;
         private System.Windows.Forms.Button whereButton;
         private System.Windows.Forms.Button havingButton;

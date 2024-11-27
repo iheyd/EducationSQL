@@ -1,13 +1,17 @@
 ﻿using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using Npgsql;
 using Point = System.Drawing.Point;
 
 namespace EducationSQL
 {
     public partial class MainForm : Form
     {
+        private string connectionString = "Host=localhost;Port=5432;Password=1234;Username=postgres;Database=educationBD";
         public MainForm()
         {
             InitializeComponent();
@@ -558,6 +562,111 @@ namespace EducationSQL
         private void exportButton_MouseUp(object sender, MouseEventArgs e)
         {
             exportButton.Location = new Point(exportButton.Location.X - 2, exportButton.Location.Y - 2);
+        }
+        
+        private void runButton_Click(object sender, EventArgs e)
+        {
+            string query = txtQueryInput.Text.Trim();
+            
+            string[] forbiddenCommands = { "INSERT", "DELETE", "UPDATE", "DROP" };
+            
+            foreach (string command in forbiddenCommands)
+            {
+                if (query.ToUpper().Contains(command))
+                {
+                    MessageBox.Show($"Команда \"{command}\" запрещена!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+
+            try
+            {
+                using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+                {
+                    connection.Open();
+                    
+                    using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
+                    {
+                        using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(command))
+                        {
+                            DataTable dataTable = new DataTable();
+                            adapter.Fill(dataTable);
+                            
+                            dataGridView1.DataSource = dataTable;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка выполнения запроса: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            txtQueryInput.Text = "";
+            dataGridView1.DataSource = null;
+            dataGridView1.Rows.Clear();
+            dataGridView1.Columns.Clear();
+        }
+        
+        private void ExportToCsv(DataGridView grid, string filePath)
+        {
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(filePath))
+                {
+                    for (int i = 0; i < grid.Columns.Count; i++)
+                    {
+                        writer.Write(grid.Columns[i].HeaderText);
+                        if (i < grid.Columns.Count - 1)
+                            writer.Write(",");
+                    }
+                    writer.WriteLine();
+
+                    foreach (DataGridViewRow row in grid.Rows)
+                    {
+                        if (!row.IsNewRow)
+                        {
+                            for (int i = 0; i < grid.Columns.Count; i++)
+                            {
+                                writer.Write(row.Cells[i].Value);
+                                if (i < grid.Columns.Count - 1)
+                                    writer.Write(",");
+                            }
+                            writer.WriteLine();
+                        }
+                    }
+                }
+                
+                MessageBox.Show("Экспорт выполнен успешно!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка экспорта: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        
+        private void exportButton_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count == 0)
+            {
+                MessageBox.Show("Нет данных для экспорта.", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "CSV файлы (*.csv)|*.csv";
+                saveFileDialog.Title = "Сохранить как";
+                saveFileDialog.FileName = "export.csv";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    ExportToCsv(dataGridView1, saveFileDialog.FileName);
+                }
+            }
         }
     }
 }
