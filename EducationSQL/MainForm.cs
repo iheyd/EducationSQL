@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -667,6 +666,66 @@ namespace EducationSQL
                     ExportToCsv(dataGridView1, saveFileDialog.FileName);
                 }
             }
+        }
+        
+        private void AddPictureBoxToPanelWithScroll(object sender, EventArgs e)
+        {
+            string imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", "contentList.png");
+            if (!File.Exists(imagePath))
+            {
+                MessageBox.Show("Изображение не найдено!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
+            PictureBox pictureBox = new PictureBox();
+            
+            pictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox.Dock = DockStyle.Top;
+            
+            panel1.Controls.Add(pictureBox);
+            
+            pictureBox.Image = Image.FromFile(imagePath);
+            panel1.AutoScroll = true;
+        }
+        
+        private void ChangeImage(string newImagePath)
+        {
+            foreach (Control control in panel1.Controls)
+            {
+                if (control is PictureBox pictureBox)
+                {
+                    panel1.Controls.Remove(pictureBox);
+                    pictureBox.Dispose();
+                    break;
+                }
+            }
+            
+            string imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", newImagePath);
+            if (!File.Exists(imagePath))
+            {
+                MessageBox.Show("Изображение не найдено!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
+            PictureBox newPictureBox = new PictureBox
+            {
+                Image = Image.FromFile(imagePath),
+                SizeMode = PictureBoxSizeMode.AutoSize,
+                Dock = DockStyle.Top
+            };
+
+            panel1.Controls.Add(newPictureBox);
+            panel1.AutoScroll = true;
+        }
+
+        private void contentButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("contentList.png");
+        }
+
+        private void diagramButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("diagramList.png");
         }
     }
 }
