@@ -181,6 +181,7 @@
             this.selectButton.Size = new System.Drawing.Size(272, 30);
             this.selectButton.TabIndex = 5;
             this.selectButton.UseVisualStyleBackColor = false;
+            this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
             this.selectButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.selectButton_MouseDown);
             this.selectButton.MouseEnter += new System.EventHandler(this.selectButton_MouseEnter);
             this.selectButton.MouseLeave += new System.EventHandler(this.selectButton_MouseLeave);
@@ -201,6 +202,7 @@
             this.whereButton.Size = new System.Drawing.Size(272, 30);
             this.whereButton.TabIndex = 6;
             this.whereButton.UseVisualStyleBackColor = false;
+            this.whereButton.Click += new System.EventHandler(this.whereButton_Click);
             this.whereButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.whereButton_MouseDown);
             this.whereButton.MouseEnter += new System.EventHandler(this.whereButton_MouseEnter);
             this.whereButton.MouseLeave += new System.EventHandler(this.whereButton_MouseLeave);
@@ -221,6 +223,7 @@
             this.order_byButton.Size = new System.Drawing.Size(272, 30);
             this.order_byButton.TabIndex = 7;
             this.order_byButton.UseVisualStyleBackColor = false;
+            this.order_byButton.Click += new System.EventHandler(this.order_byButton_Click);
             this.order_byButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.order_byButton_MouseDown);
             this.order_byButton.MouseEnter += new System.EventHandler(this.order_byButton_MouseEnter);
             this.order_byButton.MouseLeave += new System.EventHandler(this.order_byButton_MouseLeave);
@@ -241,6 +244,7 @@
             this.group_byButton.Size = new System.Drawing.Size(272, 30);
             this.group_byButton.TabIndex = 8;
             this.group_byButton.UseVisualStyleBackColor = false;
+            this.group_byButton.Click += new System.EventHandler(this.group_byButton_Click);
             this.group_byButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.group_byButton_MouseDown);
             this.group_byButton.MouseEnter += new System.EventHandler(this.group_byButton_MouseEnter);
             this.group_byButton.MouseLeave += new System.EventHandler(this.group_byButton_MouseLeave);
@@ -261,6 +265,7 @@
             this.betweenButton.Size = new System.Drawing.Size(272, 30);
             this.betweenButton.TabIndex = 9;
             this.betweenButton.UseVisualStyleBackColor = false;
+            this.betweenButton.Click += new System.EventHandler(this.betweenButton_Click);
             this.betweenButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.betweenButton_MouseDown);
             this.betweenButton.MouseEnter += new System.EventHandler(this.betweenButton_MouseEnter);
             this.betweenButton.MouseLeave += new System.EventHandler(this.betweenButton_MouseLeave);
@@ -281,6 +286,7 @@
             this.havingButton.Size = new System.Drawing.Size(272, 30);
             this.havingButton.TabIndex = 10;
             this.havingButton.UseVisualStyleBackColor = false;
+            this.havingButton.Click += new System.EventHandler(this.havingButton_Click);
             this.havingButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.havingButton_MouseDown);
             this.havingButton.MouseEnter += new System.EventHandler(this.havingButton_MouseEnter);
             this.havingButton.MouseLeave += new System.EventHandler(this.havingButton_MouseLeave);
@@ -301,6 +307,7 @@
             this.distinctButton.Size = new System.Drawing.Size(272, 30);
             this.distinctButton.TabIndex = 11;
             this.distinctButton.UseVisualStyleBackColor = false;
+            this.distinctButton.Click += new System.EventHandler(this.distinctButton_Click);
             this.distinctButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.distinctButton_MouseDown);
             this.distinctButton.MouseEnter += new System.EventHandler(this.distinctButton_MouseEnter);
             this.distinctButton.MouseLeave += new System.EventHandler(this.distinctButton_MouseLeave);
@@ -321,6 +328,7 @@
             this.exceptButton.Size = new System.Drawing.Size(272, 30);
             this.exceptButton.TabIndex = 12;
             this.exceptButton.UseVisualStyleBackColor = false;
+            this.exceptButton.Click += new System.EventHandler(this.exceptButton_Click);
             this.exceptButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.exceptButton_MouseDown);
             this.exceptButton.MouseEnter += new System.EventHandler(this.exceptButton_MouseEnter);
             this.exceptButton.MouseLeave += new System.EventHandler(this.exceptButton_MouseLeave);
@@ -341,6 +349,7 @@
             this.intersectButton.Size = new System.Drawing.Size(272, 30);
             this.intersectButton.TabIndex = 13;
             this.intersectButton.UseVisualStyleBackColor = false;
+            this.intersectButton.Click += new System.EventHandler(this.intersectButton_Click);
             this.intersectButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.intersectButton_MouseDown);
             this.intersectButton.MouseEnter += new System.EventHandler(this.intersectButton_MouseEnter);
             this.intersectButton.MouseLeave += new System.EventHandler(this.intersectButton_MouseLeave);
@@ -361,6 +370,7 @@
             this.unionButton.Size = new System.Drawing.Size(272, 30);
             this.unionButton.TabIndex = 14;
             this.unionButton.UseVisualStyleBackColor = false;
+            this.unionButton.Click += new System.EventHandler(this.unionButton_Click);
             this.unionButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.unionButton_MouseDown);
             this.unionButton.MouseEnter += new System.EventHandler(this.unionButton_MouseEnter);
             this.unionButton.MouseLeave += new System.EventHandler(this.unionButton_MouseLeave);
@@ -381,6 +391,7 @@
             this.limitButton.Size = new System.Drawing.Size(272, 30);
             this.limitButton.TabIndex = 15;
             this.limitButton.UseVisualStyleBackColor = false;
+            this.limitButton.Click += new System.EventHandler(this.limitButton_Click);
             this.limitButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.limitButton_MouseDown);
             this.limitButton.MouseEnter += new System.EventHandler(this.limitButton_MouseEnter);
             this.limitButton.MouseLeave += new System.EventHandler(this.limitButton_MouseLeave);
@@ -401,6 +412,7 @@
             this.avgButton.Size = new System.Drawing.Size(272, 30);
             this.avgButton.TabIndex = 16;
             this.avgButton.UseVisualStyleBackColor = false;
+            this.avgButton.Click += new System.EventHandler(this.avgButton_Click);
             this.avgButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.avgButton_MouseDown);
             this.avgButton.MouseEnter += new System.EventHandler(this.avgButton_MouseEnter);
             this.avgButton.MouseLeave += new System.EventHandler(this.avgButton_MouseLeave);
@@ -421,6 +433,7 @@
             this.cross_joinButton.Size = new System.Drawing.Size(272, 30);
             this.cross_joinButton.TabIndex = 17;
             this.cross_joinButton.UseVisualStyleBackColor = false;
+            this.cross_joinButton.Click += new System.EventHandler(this.cross_joinButton_Click);
             this.cross_joinButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cross_joinButton_MouseDown);
             this.cross_joinButton.MouseEnter += new System.EventHandler(this.cross_joinButton_MouseEnter);
             this.cross_joinButton.MouseLeave += new System.EventHandler(this.cross_joinButton_MouseLeave);
@@ -441,6 +454,7 @@
             this.right_joinButton.Size = new System.Drawing.Size(272, 30);
             this.right_joinButton.TabIndex = 18;
             this.right_joinButton.UseVisualStyleBackColor = false;
+            this.right_joinButton.Click += new System.EventHandler(this.right_joinButton_Click);
             this.right_joinButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.right_joinButton_MouseDown);
             this.right_joinButton.MouseEnter += new System.EventHandler(this.right_joinButton_MouseEnter);
             this.right_joinButton.MouseLeave += new System.EventHandler(this.right_joinButton_MouseLeave);
@@ -461,6 +475,7 @@
             this.left_joinButton.Size = new System.Drawing.Size(272, 30);
             this.left_joinButton.TabIndex = 19;
             this.left_joinButton.UseVisualStyleBackColor = false;
+            this.left_joinButton.Click += new System.EventHandler(this.left_joinButton_Click);
             this.left_joinButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.left_joinButton_MouseDown);
             this.left_joinButton.MouseEnter += new System.EventHandler(this.left_joinButton_MouseEnter);
             this.left_joinButton.MouseLeave += new System.EventHandler(this.left_joinButton_MouseLeave);
@@ -481,6 +496,7 @@
             this.inner_joinButton.Size = new System.Drawing.Size(272, 30);
             this.inner_joinButton.TabIndex = 20;
             this.inner_joinButton.UseVisualStyleBackColor = false;
+            this.inner_joinButton.Click += new System.EventHandler(this.inner_joinButton_Click);
             this.inner_joinButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.inner_joinButton_MouseDown);
             this.inner_joinButton.MouseEnter += new System.EventHandler(this.inner_joinButton_MouseEnter);
             this.inner_joinButton.MouseLeave += new System.EventHandler(this.inner_joinButton_MouseLeave);
@@ -501,6 +517,7 @@
             this.sumButton.Size = new System.Drawing.Size(272, 30);
             this.sumButton.TabIndex = 21;
             this.sumButton.UseVisualStyleBackColor = false;
+            this.sumButton.Click += new System.EventHandler(this.sumButton_Click);
             this.sumButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.sumButton_MouseDown);
             this.sumButton.MouseEnter += new System.EventHandler(this.sumButton_MouseEnter);
             this.sumButton.MouseLeave += new System.EventHandler(this.sumButton_MouseLeave);
@@ -521,6 +538,7 @@
             this.countButton.Size = new System.Drawing.Size(272, 30);
             this.countButton.TabIndex = 22;
             this.countButton.UseVisualStyleBackColor = false;
+            this.countButton.Click += new System.EventHandler(this.countButton_Click);
             this.countButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.countButton_MouseDown);
             this.countButton.MouseEnter += new System.EventHandler(this.countButton_MouseEnter);
             this.countButton.MouseLeave += new System.EventHandler(this.countButton_MouseLeave);
@@ -541,6 +559,7 @@
             this.concatenationButton.Size = new System.Drawing.Size(272, 30);
             this.concatenationButton.TabIndex = 23;
             this.concatenationButton.UseVisualStyleBackColor = false;
+            this.concatenationButton.Click += new System.EventHandler(this.concatenationButton_Click);
             this.concatenationButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.concatenationButton_MouseDown);
             this.concatenationButton.MouseEnter += new System.EventHandler(this.concatenationButton_MouseEnter);
             this.concatenationButton.MouseLeave += new System.EventHandler(this.concatenationButton_MouseLeave);
@@ -561,6 +580,7 @@
             this.subqueriesButton.Size = new System.Drawing.Size(272, 30);
             this.subqueriesButton.TabIndex = 24;
             this.subqueriesButton.UseVisualStyleBackColor = false;
+            this.subqueriesButton.Click += new System.EventHandler(this.subqueriesButton_Click);
             this.subqueriesButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.subqueriesButton_MouseDown);
             this.subqueriesButton.MouseEnter += new System.EventHandler(this.subqueriesButton_MouseEnter);
             this.subqueriesButton.MouseLeave += new System.EventHandler(this.subqueriesButton_MouseLeave);

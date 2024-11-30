@@ -727,5 +727,105 @@ namespace EducationSQL
         {
             ChangeImage("diagramList.png");
         }
+
+        private void selectButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("selectList.png");
+        }
+
+        private void whereButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("whereList.png");
+        }
+
+        private void havingButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("havingList.png");
+        }
+
+        private void betweenButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("betweenList.png");
+        }
+
+        private void group_byButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("group_byList.png");
+        }
+
+        private void order_byButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("order_byList.png");
+        }
+
+        private void limitButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("limitList.png");
+        }
+
+        private void unionButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("unionList.png");
+        }
+
+        private void intersectButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("intersectList.png");
+        }
+
+        private void exceptButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("exceptList.png");
+        }
+
+        private void distinctButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("distinctList.png");
+        }
+
+        private void inner_joinButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("inner_joinList.png");
+        }
+        
+        private void left_joinButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("left_joinList.png");
+        }
+
+        private void right_joinButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("right_joinList.png");
+        }
+
+        private void cross_joinButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("cross_joinList.png");
+        }
+
+        private void avgButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("avgList.png");
+        }
+
+        private void sumButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("sumList.png");
+        }
+
+        private void countButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("countList.png");
+        }
+
+        private void subqueriesButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("subqueriesList.png");
+        }
+        
+        private void concatenationButton_Click(object sender, EventArgs e)
+        {
+            ChangeImage("concatenationList.png");
+        }
     }
 }
